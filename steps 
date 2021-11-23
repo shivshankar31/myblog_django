@@ -1,0 +1,23 @@
+step 1 : 55: setup the virtualenv and create project & app
+
+    mkvirtualenv <projectname>
+    python -m pip install Django or python3 -m pip install Django
+    django-admin startproject <projectname>
+    
+get inside the project folder and create app
+    python manage.py startapp <appname> or python3 mamage.py startapp <appname>
+    python manage.py runserver 
+
+now open the project folder in vscode
+
+
+step2: 57: URLS and Views
+
+create url.py inside app and define urlpatterns 
+create functions inside view.py
+assign views.<function> in the urls.py file
+assign name for each url path in urls.py file 
+
+register path in main project folder urls.py urlparttern path('', include('blog.urls'))   
+
+
