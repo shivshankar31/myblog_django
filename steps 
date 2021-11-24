@@ -40,3 +40,8 @@ step 4: 59: adding css file and add link on the html files, also add staticfile_
 step 4.4: add staticfile_dirs in settings.py to inform django that we have created static folder globaly in settings.py
 step 4.5: link app.css in base.html file 
 step 4.6: load static and link index.css file with its path in index.html
+
+step 5: 58: adding image to static folder
+
+step 5.1: 59: add image folder under static/blog and add some images, using static add the image path and refresh the page
+step 6: 60: with includes all post page and css file for styling, 

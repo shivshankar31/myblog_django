@@ -2,27 +2,21 @@
 <! step 3.4: create blocks based on base template !>
 <! step 4.3: create content inside the block content!>
 <! step 4.6: link index.css file with its path in index.html!>
-
+<! step 5.1: add image folder under static/blog and add some images, using static add the image path and refresh the page!>
 {% extends 'base.html' %}
 {% load static %}
 
 {% block title %}Blog{% endblock title %}
 
 {% block css_file %}
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}">
     <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock css_file %}
 
 {% block content %}
-    <header id="main-navigation">
-  <h1><a href="">Shiv Blog</a></h1>
-  <nav>
-    <a href="">All Posts</a>
-  </nav>
-</header>
-
 <section id="welcome">
   <header>
-    <img src="" alt="shiv - The Author Of This Blog" />
+    <img src="{% static 'blog/images/man.jpeg' %}" alt="shiv - The Author Of This Blog" />
     <h2>Shiv'S BLOG</h2>
   </header>
   <p>Hi, I am Shiv and I love to blog about tech and the world!</p>
@@ -32,21 +26,7 @@
   <h2>My Latest Thoughts</h2>
 
   <ul>
-    <li>
-      <article class="post">
-        <a href="">
-          <img src="" alt="Mountain Hiking" />
-          <div class="post__content">
-            <h3>Mountain Hiking</h3>
-            <p>
-              There's nothing like the views you get when hiking in the
-              mountains! And I wasn't even prepared for what happened whilst I
-              was enjoying the view!
-            </p>
-          </div>
-        </a>
-      </article>
-    </li>
+   {% include "blog/includes/post.html" %}
   </ul>
 </section>
 

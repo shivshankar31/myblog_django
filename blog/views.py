@@ -11,7 +11,7 @@ def home(request):
     return render(request, 'blog/index.html')
 
 def post(request):
-    pass
+    return render(request, 'blog/all-posts.html')
 
 def post_Details(request):
     pass
