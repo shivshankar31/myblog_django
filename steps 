@@ -32,3 +32,11 @@ step 3: 58: adding index.html , base.html templates and registring created app, 
 
 so for we have the http://127.0.0.1:8000 page 
 
+step 4: 59: adding css file and add link on the html files, also add staticfile_dir location at settings.py
+
+4.1: create index.css file instide app static/blog location and add the css code
+4.2: create app.css file in global location and add all common style in this file
+4.3: create content inside the <block content> in index.html
+step 4.4: add staticfile_dirs in settings.py to inform django that we have created static folder globaly in settings.py
+step 4.5: link app.css in base.html file 
+step 4.6: load static and link index.css file with its path in index.html
