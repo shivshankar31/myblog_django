@@ -1,0 +1,37 @@
+<!step 8.1: add detail_post html file, adding image and some hardcodes are give but it will be change to dynamic in upcoming steps!>
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Posts - title
+{% endblock title %}
+
+{% block css_file %}
+    <link rel="stylesheet" href="{% static 'blog/detail_post.css' %}">
+    
+{% endblock css_file %}
+
+{% block content %}
+<section id="summary">
+    <h2> Post Title </h2>
+    <article>
+        <img src="{% static '/blocg/images/mushroom.jpg' %}" alt="Post Title" />
+        <address> By Shiv </address>
+        <div>last update on <time> November 24, 2021</time> </div>
+    </article>
+</section>
+
+<main>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, dolorum ipsum debitis eveniet harum beatae soluta exercitationem pariatur odit amet repudiandae at hic aliquam laborum autem magni! Quidem, tempora molestias!
+    </p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates a, blanditiis porro doloremque vel corrupti. Recusandae consectetur officiis, iusto illum, sit repellendus ratione cupiditate eveniet atque quae pariatur porro repellat.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia iste, amet excepturi quibusdam quam rem itaque doloribus, recusandae, nihil autem reiciendis tempora voluptas inventore? Doloremque enim labore molestiae omnis facere!
+    </p
+</main>
+{% endblock content%}

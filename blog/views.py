@@ -1,5 +1,6 @@
 # step 2.2: create 3 function with pass
 # step 3.5: render the index page an include the path 
+# step 8.3: add return for detail_post function, also add slug as a argument inorder to view the page
 
 
 from django.shortcuts import render
@@ -13,5 +14,5 @@ def home(request):
 def post(request):
     return render(request, 'blog/all-posts.html')
 
-def post_Details(request):
-    pass
+def detail_post(request, slug):
+    return render(request, 'blog/detail_post.html')
