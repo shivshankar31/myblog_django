@@ -51,3 +51,8 @@ step 7.1: add url tag for shiv blog by specifing name from app url.py
 step 7.2: add url tag for all post by specifing name from app url.py
 step 7.3: add url tag for specific post by specifing name from url.py. 
 step 7.3: add url tag for specific post by specifing name from url.py. 'mountain' is hardcoded for testing, it wont work because we didnt specify the function yet 
+
+step 8: 62: adding detail post page and style
+step 8.1: add detail_post html file, adding image and some hardcodes are give but it will be change to dynamic in upcoming steps
+step 8.2: copy css file from given resource, after add this css link to detail_post html file, in order to call the styles
+step 8.3: add return for detail_post function, also add slug as a argument inorder to view the page
