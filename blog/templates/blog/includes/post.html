@@ -1,11 +1,12 @@
-
+<!step 7.3: add url tag for specific post by specifing name from url.py. 
+'mountain' is hardcoded for testing, it wont work because we didnt specify the function yet !>
 
 {% load static %}
 
 
 <li>
     <article class="post">
-      <a href="">
+      <a href="{% url 'blog_details' 'mountain'%}">
         <img src="{% static 'blog/images/mushroom.jpg' %}" alt="Mountain Hiking" />
         <div class="post__content">
           <h3>Mountain Hiking</h3>
