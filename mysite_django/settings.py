@@ -29,8 +29,10 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# step 3.6: add blog to installed app to inform django that we have app name 'blog'
 
 INSTALLED_APPS = [
+    'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,10 +53,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mysite_django.urls'
 
+# step 3.7: add template folder to templates dirs, so that django knows that we have add template folder globaly 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

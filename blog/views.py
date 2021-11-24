@@ -1,4 +1,5 @@
 # step 2.2: create 3 function with pass
+# step 3.5: render the index page an include the path 
 
 
 from django.shortcuts import render
@@ -7,7 +8,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    pass
+    return render(request, 'blog/index.html')
 
 def post(request):
     pass

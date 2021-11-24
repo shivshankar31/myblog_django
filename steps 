@@ -21,3 +21,14 @@ assign name for each url path in urls.py file
 register path in main project folder urls.py urlparttern path('', include('blog.urls'))   
 
 
+step 3: 58: adding index.html , base.html templates and registring created app, asigning base_dir
+
+3.1: create index template inside app folder 
+3.2: create base templete globally which holde only the base skelton 
+3.3: add block to title, body and to insert css file
+3.4: create blocks based on base template
+3.6: add blog to installed app to inform django that we have app name 'blog'in settings.py
+3.7: add template folder to templates dirs, so that django knows that we have add template folder globaly in settings.py
+
+so for we have the http://127.0.0.1:8000 page 
+
