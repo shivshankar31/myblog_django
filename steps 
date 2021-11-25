@@ -56,3 +56,10 @@ step 8: 62: adding detail post page and style
 step 8.1: add detail_post html file, adding image and some hardcodes are give but it will be change to dynamic in upcoming steps
 step 8.2: copy css file from given resource, after add this css link to detail_post html file, in order to call the styles
 step 8.3: add return for detail_post function, also add slug as a argument inorder to view the page
+
+step 9: 63: adding dummy data
+
+step10: 64: Special Template Features & Syntax
+step 10.1: add recent 3 post on the home page, from dummy data, also images are added
+step 10.2: add 'for' loop to create the multiple post, the number of post is specified from views.py slicing
+step 10.3: excerpt, title, image, author and url slug is added, here we have used ''.'' notations and 'add' tag

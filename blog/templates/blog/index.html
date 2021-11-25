@@ -3,6 +3,11 @@
 <! step 4.3: create content inside the block content!>
 <! step 4.6: link index.css file with its path in index.html!>
 <! step 5.1: add image folder under static/blog and add some images, using static add the image path and refresh the page!>
+<! step 10.2: add 'for' loop to create the multiple post, the number of post is specified from views.py slicing !>
+
+
+
+
 {% extends 'base.html' %}
 {% load static %}
 
@@ -26,7 +31,9 @@
   <h2>My Latest Thoughts</h2>
 
   <ul>
-   {% include "blog/includes/post.html" %}
+    {% for pos in post %}
+      {% include "blog/includes/post.html" %}
+    {% endfor %}
   </ul>
 </section>
 

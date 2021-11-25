@@ -1,19 +1,19 @@
 <!step 7.3: add url tag for specific post by specifing name from url.py. 
-'mountain' is hardcoded for testing, it wont work because we didnt specify the function yet !>
+'mountain' is hardcoded for testing, it wont work because we didnt specify the function yet !> 
+<! step 10.3: excerpt, title, image, author and url slug is added, here we have used ''.'' notations and 'add' tag !>
+
 
 {% load static %}
 
 
 <li>
     <article class="post">
-      <a href="{% url 'blog_details' 'mountain'%}">
-        <img src="{% static 'blog/images/mushroom.jpg' %}" alt="Mountain Hiking" />
+      <a href="{% url 'blog_details' pos.slug %}">
+        <img src="{% static 'blog/images/'|add:pos.image %}" alt={{ pos.author | title }} />
         <div class="post__content">
-          <h3>Mountain Hiking</h3>
+          <h3>{{ pos.title | title}}</h3>
           <p>
-              There's nothing like the views you get when hiking in the
-              mountains! And I wasn't even prepared for what happened whilst I
-              was enjoying the view!
+              {{ pos.excerpt }}
           </p>
         </div>
       </a>
