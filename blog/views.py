@@ -2,7 +2,8 @@
 # step 3.5: render the index page an include the path 
 # step 8.3: add return for detail_post function, also add slug as a argument inorder to view the page
 # step 10.1: add recent 3 post on the home page, from dummy data, also images are added
-
+# step 11.1: for all post page function is defind in views.py, to collect all post we use dict in render return  
+# step 11.3: In views.py, detail_post function use python next() function to return next item using for and if statements and return a key value
 
 from datetime import date
 from django.shortcuts import render
@@ -14,7 +15,7 @@ allposts = [
     {
         "slug": "hike-in-the-mountains",
         "image": "it.jpg",
-        "author": "Maximilian",
+        "author": "Maximilia",
         "date": date(2021, 7, 21),
         "title": "Mountain Hiking",
         "excerpt": "There's nothing like the views you get when hiking in the mountains! And I wasn't even prepared for what happened whilst I was enjoying the view!",
@@ -85,8 +86,12 @@ def home(request):
     return render(request, 'blog/index.html', { 'post': recent_post })
 
 def post(request):
-    
-    return render(request, 'blog/all-posts.html')
+    return render(request, 'blog/all-posts.html', {
+        'allpost' : allposts
+    })
 
 def detail_post(request, slug):
-    return render(request, 'blog/detail_post.html')
+    identified_post = next(post for post in allposts if post['slug'] == slug)
+    return render(request, 'blog/detail_post.html', {
+        'post_detail' : identified_post
+    })

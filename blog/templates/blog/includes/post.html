@@ -3,17 +3,18 @@
 <! step 10.3: excerpt, title, image, author and url slug is added, here we have used ''.'' notations and 'add' tag !>
 
 
+
 {% load static %}
 
 
 <li>
     <article class="post">
-      <a href="{% url 'blog_details' pos.slug %}">
-        <img src="{% static 'blog/images/'|add:pos.image %}" alt={{ pos.author | title }} />
+      <a href="{% url "blog_details" post.slug %}">
+        <img src="{% static 'blog/images/'|add:post.image %}" alt={{ postauthor | title }} />
         <div class="post__content">
-          <h3>{{ pos.title | title}}</h3>
+          <h3>{{ post.title | title}}</h3>
           <p>
-              {{ pos.excerpt }}
+              {{ post.excerpt }}
           </p>
         </div>
       </a>

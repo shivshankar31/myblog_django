@@ -1,5 +1,5 @@
 <!step 6.1: create all_post.html and inherit from base.html, which show all the post !>
-
+<!step 11.2: in the all-post html generate all the post using 'include' in 'for loop' !>
 
 
 {% extends 'base.html' %}
@@ -19,13 +19,10 @@ All Posts
     <h2> My Collection Posts </h2>
 
     <ul>
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-
+        {% for post in allpost %}
+            {% include "blog/includes/post.html" %}
+        {% endfor %}
+        
     </ul>
 </section>
 
