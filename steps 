@@ -69,3 +69,6 @@ step 11.1: for all post page function is defind in views.py, to collect all post
 step 11.2: in the all-post html generate all the post using 'include' in 'for loop'. now all post page have all the avaliable post
 step 11.3: In views.py, detail_post function use python next() function to return next item using for and if statements and return a key value
 step 11.4: In post.html, using the same key, change title, image, author, posted date and content dynamicly generated
+
+step 12: 66: adding 404 page
+step 12.1: add 404.html file in main templete folder and add extends, title and content of the page for now, we are connecting to the website now.
