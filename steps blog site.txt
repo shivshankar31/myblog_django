@@ -101,3 +101,9 @@ step 17: 124: add date through Admin panel
 step 18: 125: configure slug field
 step 18.1: To create slug automaticly, add 'prepopulated_fields = {'slug': ('title',)}' field in admin.py 
 
+step 19: 126, 127: Fetch data from DB, display data
+step 19.1: in view.py file - home page use objects.all and order by decending and slice to get new post
+step 19.2: in view.py file - all post page, same as above use all() to display all post. 
+step 19.3: in view.py file - detail post page, use get object 404 to display the single post.
+step 19.4: on post.html and detail_post.html change the name 'image' to image_name'
+step 19.5: remove all unused function and date from view.py file
