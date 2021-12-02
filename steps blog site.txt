@@ -76,3 +76,21 @@ step 11.4: In post.html, using the same key, change title, image, author, posted
 
 step 12: 66: adding 404 page
 step 12.1: add 404.html file in main templete folder and add extends, title and content of the page for now, we are connecting to the website now.
+
+create 3 models Post, Author, Tag with its field.  
+step 13: 119: add Post Model
+step 13.1: add models Post in models.py file, with title, excerpt, image_name, date, slug, content.
+
+step 14: 120: Author model, one to many
+Step 14.1: Add Author model in models.py with fields first_name, last_name, email
+step 14.2: add author field in Post as models.foreignkey, it is used to mention (many to one relationship) field.
+
+step 15: 121: Tag model, many to many
+step 15.1: add Tag model in models.py with field caption.
+step 15.2: add tags field to Post as models.manytomanyfield.
+
+step 16: 122: register the models to admin.py
+step 16.1: register all three models in admin.py file to access the models on admin panel.
+step 16.2: also add admin panel display class and add to register.
+step 16.3: makemigrations and migrate the changes.
+
