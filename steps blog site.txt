@@ -94,3 +94,10 @@ step 16.1: register all three models in admin.py file to access the models on ad
 step 16.2: also add admin panel display class and add to register.
 step 16.3: makemigrations and migrate the changes.
 
+create supersuper using 'python3 manage.py createsuperuser'
+
+step 17: 124: add date through Admin panel
+
+step 18: 125: configure slug field
+step 18.1: To create slug automaticly, add 'prepopulated_fields = {'slug': ('title',)}' field in admin.py 
+
