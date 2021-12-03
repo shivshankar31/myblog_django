@@ -107,3 +107,8 @@ step 19.2: in view.py file - all post page, same as above use all() to display a
 step 19.3: in view.py file - detail post page, use get object 404 to display the single post.
 step 19.4: on post.html and detail_post.html change the name 'image' to image_name'
 step 19.5: remove all unused function and date from view.py file
+
+step 20: 128: Add tag details to single post
+step 20.1: In views.py, in order to generate the multiple selected collect all the tags in one key - 'post_detail.tags.all()'.
+step 20.2: In detail_post.html file, generate the tags using for loop.
+step 20.3: add some styling in detail_post.css file

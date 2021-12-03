@@ -8,10 +8,11 @@
 # step 19.2: in view.py file - all post page, same as above use all() to display all post. 
 # step 19.3: in view.py file - detail post page, use get object 404 to display the single post.
 # step 19.5: remove all unused function and date from view.py file
+# step 20.1: In views.py, in order to generate the multiple selected collect all the tags in one key - 'post_detail.tags.all()'.
 
 from django.shortcuts import render, get_object_or_404
 
-from blog.models import Post
+from blog.models import Post, Tag
 
 # Create your views here.
 
@@ -33,4 +34,6 @@ def detail_post(request, slug):
 
     #identified_post = next(post for post in allposts if post['slug'] == slug)
     return render(request, 'blog/detail_post.html', {
-        'post_detail' : post_detail })
+        'post_detail' : post_detail,
+        'post_tag' : post_detail.tags.all()
+        })

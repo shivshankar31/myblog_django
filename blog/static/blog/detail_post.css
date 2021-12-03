@@ -1,4 +1,7 @@
 /* step 8.2: copy css file from given resource, after add this css link to detail_post html file, in order to call the styles*/
+/* step 20.3: add some styling in detail_post.css file */
+
+
 
 body {
     background-color: #e7e7e7;
@@ -24,6 +27,7 @@ body {
   #summary h2 {
     color: white;
     font-size: 4.5rem;
+    margin-bottom: 0.25rem;
   }
   
   #summary article {
@@ -49,6 +53,11 @@ body {
     font-weight: bold;
   }
   
+  #summary a{
+    color: white;
+    text-decoration: none;
+  }
+  
   #summary time {
     font-weight: bold;
   } 
@@ -61,4 +70,11 @@ body {
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .tag {
+    background-color: white;
+    color: #390281;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
   }
