@@ -2,7 +2,7 @@
 <! step 11.4: In post.html, using the same key, change title, image, author, posted date and content dynamicly generated, learned (line break filter) !>
 <!step 19.4: on post.html and detail_post.html change the name 'image' to image_name'!>
 <!step 20.2: In detail_post.html file, generate the tags using for loop.!>
-
+<!step 20.4: convert author name to href by clicking it takes us to the author email in detail_post.html, also add some style in css file !>
 {% extends 'base.html' %}
 {% load static %}
 
@@ -27,7 +27,7 @@
     </div>
     <article>
         <img src="{% static 'blog/images/'|add:post_detail.image_name %}" alt="{{ post_detail.title }}" />
-        <address> By <a href="mailto: test@test.com"> {{post_detail.author | title}} </a> </address>
+        <address> By <a href="mailto: {{ post_detail.author.email}}"> {{post_detail.author | title}} </a> </address>
         <div>last update on <time> {{post_detail.date | date:"D d m y"}}</time> </div>
     </article>
 </section>
