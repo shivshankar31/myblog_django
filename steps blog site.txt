@@ -124,7 +124,11 @@ step 21.3: In settings.py, add MEDIA_ROOT = BASE_DIR /'Upload' and add MEDIA_URL
 setp 21.4: In admin.py, remove image_name from list_diaplay.
 now image field is add but still vriable is not yet diclared.
 
-step: 22: serving the uploded image
+step: 22: 187: serving the uploded image
 step 22.1: In main project urls.py, add static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) to urlpattern.
 step 22.2: In detail_post.html, remove static and add post_detail.image.url to get the post_detail.image.url
 step 22.3: In post.html, remove static and add post.image.url
+
+Step 23: 188: convert all functions to class in views.py
+step 23.1: In views.py, convert all function to class based view
+step 23.2: In urls.py, change the path according to class dased views
