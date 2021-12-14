@@ -113,3 +113,13 @@ step 20.1: In views.py, in order to generate the multiple selected collect all t
 step 20.2: In detail_post.html file, generate the tags using for loop.
 step 20.3: add some styling in detail_post.css file
 step 20.4: convert author name to href by clicking it takes us to the author email in detail_post.html. also add some style in css file 
+
+Section 14:
+In this section we are working on the blog website uploding image, adding comments, add read later feature with sessions. 
+
+step 21: 186: Adding image field to model and add MEDIA_ROOT, MEDIA_URL
+step 21.1: In models.py, change the image field to model.imagefield
+step 21.2: Add Upload folder in the root to save the images
+step 21.3: In settings.py, add MEDIA_ROOT = BASE_DIR /'Upload' and add MEDIA_URL = '/files/' - it can be anyname
+setp 21.4: In admin.py, remove image_name from list_diaplay.
+now image field is add but still vriable is not yet diclared.

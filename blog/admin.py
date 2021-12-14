@@ -10,7 +10,7 @@ from blog.models import Author, Post, Tag
 
 # Register your models here.
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author','image_name', 'slug', 'date')
+    list_display = ('title', 'author','image', 'slug', 'date')
     prepopulated_fields = {'slug': ('title',)} 
 
 class AuthorAdmin(admin.ModelAdmin):

@@ -33,7 +33,8 @@ class Author(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=100)
     excerpt = models.CharField(max_length=200)
-    image_name = models.CharField(max_length=50)
+    # image_name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='Prof_img/% Y/% M/% D/', null = True)
     date = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(unique = True)
     content = models.TextField(validators= [MinLengthValidator(0)])
