@@ -3,6 +3,10 @@
 <!step 19.4: on post.html and detail_post.html change the name 'image' to image_name'!>
 <!step 20.2: In detail_post.html file, generate the tags using for loop.!>
 <!step 20.4: convert author name to href by clicking it takes us to the author email in detail_post.html, also add some style in css file !>
+<!step 22.2: In detail_post.html, remove static and add post_detail.image.url to get the post_detail.image.url!>
+
+
+
 {% extends 'base.html' %}
 {% load static %}
 
@@ -26,7 +30,7 @@
         
     </div>
     <article>
-        <img src="{% static 'blog/images/'|add:post_detail.image_name %}" alt="{{ post_detail.title }}" />
+        <img src="{{ post_detail.image.url }}" alt="{{ post_detail.title }}" />
         <address> By <a href="mailto: {{ post_detail.author.email}}"> {{post_detail.author | title}} </a> </address>
         <div>last update on <time> {{post_detail.date | date:"D d m y"}}</time> </div>
     </article>
