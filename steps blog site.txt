@@ -132,3 +132,7 @@ step 22.3: In post.html, remove static and add post.image.url
 Step 23: 188: convert all functions to class in views.py
 step 23.1: In views.py, convert all function to class based view
 step 23.2: In urls.py, change the path according to class dased views
+
+step 24: 189: create comment model in models.py
+step 24.1: add new comment class in the model and add fields as user_name, email, comment post as models.foreignkey
+step 24.2: makemigrations and migrate to create table in database

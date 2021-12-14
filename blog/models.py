@@ -3,6 +3,7 @@
 # step 14.2: add author field in Post as models.foreignkey, it is used to mention (many to one relationship) field.
 # step 15.1: add Tag model in models.py with field caption.
 # step 15.2: add tags field to Post as models.manytomanyfield.
+# step 24.1: add new comment class in the model and add fields as user_name, email, comment post as models.foreignkey
 
 
 from django.db import models
@@ -42,5 +43,9 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag)
 
 
-
+class Comment(models.Model):
+    user_name = models.CharField(max_length=50)
+    email = models.EmailField()
+    text = models.TextField(max_length=400)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
 
