@@ -10,6 +10,7 @@
 # step 19.5: remove all unused function and date from view.py file
 # step 20.1: In views.py, in order to generate the multiple selected collect all the tags in one key - 'post_detail.tags.all()'.
 # step 23.1: In views.py, convert all function to class based view
+# step 25.3: In views.py, import created form class, in detailPost class under get context data function call the created CommentForm and name it
 
 
 
@@ -17,6 +18,7 @@ from django.shortcuts import render, get_object_or_404
 
 from blog.models import Post, Tag
 from django.views.generic import ListView, DetailView
+from .forms import CommentForm
 # Create your views here.
 
 
@@ -57,6 +59,7 @@ class DetailPost(DetailView):
     def get_context_data(self, **kwargs):
         context1 = super().get_context_data(**kwargs)
         context1['post_tag'] = self.object.tags.all()
+        context1['comment_form'] = CommentForm()
         return context1 
 
    

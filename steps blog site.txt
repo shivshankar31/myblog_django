@@ -136,3 +136,10 @@ step 23.2: In urls.py, change the path according to class dased views
 step 24: 189: create comment model in models.py
 step 24.1: add new comment class in the model and add fields as user_name, email, comment post as models.foreignkey
 step 24.2: makemigrations and migrate to create table in database
+
+step 25: 190: create comment form using models.ModelForm class
+step 25.1: add forms.py file in the add, import model class and forms
+step 25.2: create a class CommentForm and call the model and add or exclude fields form model class and use lables to rename the fields
+step 25.3: In views.py, import created form class, in detailPost class under get context data function call the created CommentForm and name it
+step 25.4: In detail_post.html, create new div, form and call the created name for the form class
+ 

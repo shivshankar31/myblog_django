@@ -4,7 +4,7 @@
 <!step 20.2: In detail_post.html file, generate the tags using for loop.!>
 <!step 20.4: convert author name to href by clicking it takes us to the author email in detail_post.html, also add some style in css file !>
 <!step 22.2: In detail_post.html, remove static and add post_detail.image.url to get the post_detail.image.url!>
-
+<!step 25.4: In detail_post.html, create new div, form and call the created name for the form class!>
 
 
 {% extends 'base.html' %}
@@ -39,4 +39,11 @@
 <main>
     {{post_detail.content | linebreaks}}
 </main>
+
+<div>
+    <form>
+        {{ comment_form }}
+        <button> Save Comment </button>
+    </form>
+</div>
 {% endblock content%}
