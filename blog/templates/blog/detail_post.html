@@ -5,7 +5,7 @@
 <!step 20.4: convert author name to href by clicking it takes us to the author email in detail_post.html, also add some style in css file !>
 <!step 22.2: In detail_post.html, remove static and add post_detail.image.url to get the post_detail.image.url!>
 <!step 25.4: In detail_post.html, create new div, form and call the created name for the form class!>
-
+<!step 26.2: to create comment form to all, create for loop and call the fields as shown !>
 
 {% extends 'base.html' %}
 {% load static %}
@@ -40,10 +40,19 @@
     {{post_detail.content | linebreaks}}
 </main>
 
-<div>
+<section id="comment-form">
+    <h2> Your Comment </h2>
     <form>
-        {{ comment_form }}
-        <button> Save Comment </button>
+        {% for form_field in comment_form %}
+            <div class = 'form-control'>
+                {{ form_field.label_tag }}
+                {{ form_field }}
+                {{ form_field.errors }}
+            </div> 
+        {% endfor %}
+        <button> Save Comment </button>   
     </form>
-</div>
+</section>
+
+
 {% endblock content%}

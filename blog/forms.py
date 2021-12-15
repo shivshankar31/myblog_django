@@ -12,7 +12,7 @@ class CommentForm(forms.ModelForm):
         # fields = '__all__' #this can be uses to fetch allfields form the model class
         # fields = ['']# also we can list required fields
         exclude = ['post'] #this will exclude the listed fields
-        lables = {
+        labels = {
             'user_name': 'Your Name',
             'email': 'Email',
             'text': 'Comment'
