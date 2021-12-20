@@ -146,4 +146,7 @@ step 25.4: In detail_post.html, create new div, form and call the created name f
 step 26: 191: add styling to the comment form
 step 26.1: add style code to detail_post.css
 step 26.2: to create comment form to all, create for loop and call the fields as shown 
- 
+
+step: 27: 192: Handling Comment Form Submissios
+step 27.1: In detail_post.html, Add csrf token, action and method to the form
+step 27.2: In views.py, insted of DetailView, use View and manually create get and post function 

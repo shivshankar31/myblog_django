@@ -14,8 +14,11 @@
 
 
 
+from typing import Reversible
+from django.http.response import HttpResponseRedirect
+from django.urls import reverse
 from django.shortcuts import render, get_object_or_404
-
+from django.views import View
 from blog.models import Post, Tag
 from django.views.generic import ListView, DetailView
 from .forms import CommentForm
@@ -51,16 +54,54 @@ class PostList(ListView):
 #         'allpost' : all_post
 #     })
 
-class DetailPost(DetailView):
-    template_name = 'blog/detail_post.html'
-    model = Post
-    context_object_name = 'post_detail'
 
-    def get_context_data(self, **kwargs):
-        context1 = super().get_context_data(**kwargs)
-        context1['post_tag'] = self.object.tags.all()
-        context1['comment_form'] = CommentForm()
-        return context1 
+class DetailPost(View):
+
+    def get(self, request, slug):
+        post = Post.objects.get(slug = slug)
+        details = {
+            'post_detail': post,
+            'post_tag': post.tags.all(),
+            'comment_form': CommentForm()
+        }
+        return render(request, 'blog/detail_post.html', details)
+
+
+    def post(self, request, slug):
+        comment_form = CommentForm(request.POST)
+        post = Post.objects.get(slug = slug)
+
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+            return HttpResponseRedirect(reverse('blog_details', args=[slug]))
+
+        
+        # details = {
+        #     'post': post,
+        #     'post_tag': post.tags.all(),
+        #     'comment_form': comment_form
+        # }
+        return render(request, 'blog/detail_post.html', {
+            'post_detail': post,
+            'post_tag': post.tags.all(),
+            'comment_form': comment_form
+        } )
+
+        
+
+
+# class DetailPost(DetailView):
+#     template_name = 'blog/detail_post.html'
+#     model = Post
+#     context_object_name = 'post_detail'
+
+#     def get_context_data(self, **kwargs):
+#         context1 = super().get_context_data(**kwargs)
+#         context1['post_tag'] = self.object.tags.all()
+#         context1['comment_form'] = CommentForm()
+#         return context1 
 
    
 # def detail_post(request, slug):
