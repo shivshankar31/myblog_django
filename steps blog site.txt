@@ -162,3 +162,7 @@ step 29.2: in detail_post.html, display the comments using for loop.
 I have added data file as adition
 
 step 30: 195: Add styling to the comment
+
+step 31 196: adding comment to admin page
+step 31.1: adding comment to admin.py admin.site.register
+step 31.2: to return object into string, redefine __str__ 

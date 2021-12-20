@@ -4,7 +4,7 @@
 # step 15.1: add Tag model in models.py with field caption.
 # step 15.2: add tags field to Post as models.manytomanyfield.
 # step 24.1: add new comment class in the model and add fields as user_name, email, comment post as models.foreignkey
-
+# step 31.2: to return object into string, redefine __str__ 
 
 from django.db import models
 from django.db.models.base import Model
@@ -42,6 +42,12 @@ class Post(models.Model):
     author = models.ForeignKey(Author, null= True, on_delete=models.SET_NULL, related_name='Post')
     tags = models.ManyToManyField(Tag)
 
+    # if we need to combain two fields then we can use additional function
+    # def title1(self):
+    #     return f'{self.title}'
+
+    def __str__(self):
+        return self.title
 
 class Comment(models.Model):
     user_name = models.CharField(max_length=50)
