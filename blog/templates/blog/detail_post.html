@@ -9,7 +9,7 @@
 <!step 27.1: In detail_post.html, Add csrf token, action and method to the form !>
 <!step 28.2: In detail_pot.html, use if statements to call the error in side the class. 
   step 28.3: In detail_pot.html, also create an aleart on the top of the page and include FIX href tag to take to the error.!>
-
+<!step 29.2: in detail_post.html, display the comments using for loop !>
 
 
 
@@ -53,7 +53,17 @@
 <main>
     {{post_detail.content | linebreaks}}
 </main>
-
+<section>
+    <div>
+        <ul>
+            {% for comment in comment%}
+            <h2>{{ comment.user_name}}</h2>
+            <p>{{ comment.text}}</p>
+            <h5> {{ comment.date}} </h5> 
+            {% endfor %}
+        </ul>
+    </div>
+</section>
 <section id="comment-form">
     <h2> Your Comment </h2>
     <form action="{% url "blog_details" post_detail.slug %}" method="POST">

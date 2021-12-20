@@ -155,3 +155,8 @@ step 28: 193: Addng style to error, Fix link, aleart on top of the page
 step 28.1: add style to detail_post.css
 step 28.2: In detail_pot.html, use if statements to call the error in side the class. 
 step 28.3: In detail_pot.html, also create an aleart on the top of the page and include FIX href tag to take to the error.
+
+step 29: 194: display comments on the post
+step 29.1: In views.py, as we give the name in comment model, call that in detail
+step 29.2: in detail_post.html, display the comments using for loop. 
+I have added data file as adition

@@ -12,6 +12,7 @@
 # step 23.1: In views.py, convert all function to class based view
 # step 25.3: In views.py, import created form class, in detailPost class under get context data function call the created CommentForm and name it
 # step 27.2: In views.py, insted of DetailView, use View and manually create get and post function 
+# step 29.1: In views.py, as we give the name in comment model, call that in detail
 
 
 
@@ -63,7 +64,8 @@ class DetailPost(View):
         details = {
             'post_detail': post,
             'post_tag': post.tags.all(),
-            'comment_form': CommentForm()
+            'comment_form': CommentForm(),
+            'comment': post.comments.all().order_by('-id')
         }
         return render(request, 'blog/detail_post.html', details)
 
@@ -87,7 +89,8 @@ class DetailPost(View):
         return render(request, 'blog/detail_post.html', {
             'post_detail': post,
             'post_tag': post.tags.all(),
-            'comment_form': comment_form
+            'comment_form': comment_form,
+            'comment': post.comments.all().order_by('-id')
         } )
 
         
