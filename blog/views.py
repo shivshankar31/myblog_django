@@ -11,6 +11,7 @@
 # step 20.1: In views.py, in order to generate the multiple selected collect all the tags in one key - 'post_detail.tags.all()'.
 # step 23.1: In views.py, convert all function to class based view
 # step 25.3: In views.py, import created form class, in detailPost class under get context data function call the created CommentForm and name it
+# step 27.2: In views.py, insted of DetailView, use View and manually create get and post function 
 
 
 

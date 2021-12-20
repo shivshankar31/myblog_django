@@ -150,3 +150,8 @@ step 26.2: to create comment form to all, create for loop and call the fields as
 step: 27: 192: Handling Comment Form Submissios
 step 27.1: In detail_post.html, Add csrf token, action and method to the form
 step 27.2: In views.py, insted of DetailView, use View and manually create get and post function 
+
+step 28: 193: Addng style to error, Fix link, aleart on top of the page
+step 28.1: add style to detail_post.css
+step 28.2: In detail_pot.html, use if statements to call the error in side the class. 
+step 28.3: In detail_pot.html, also create an aleart on the top of the page and include FIX href tag to take to the error.

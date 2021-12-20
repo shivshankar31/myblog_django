@@ -6,6 +6,12 @@
 <!step 22.2: In detail_post.html, remove static and add post_detail.image.url to get the post_detail.image.url!>
 <!step 25.4: In detail_post.html, create new div, form and call the created name for the form class!>
 <!step 26.2: to create comment form to all, create for loop and call the fields as shown !>
+<!step 27.1: In detail_post.html, Add csrf token, action and method to the form !>
+<!step 28.2: In detail_pot.html, use if statements to call the error in side the class. 
+  step 28.3: In detail_pot.html, also create an aleart on the top of the page and include FIX href tag to take to the error.!>
+
+
+
 
 {% extends 'base.html' %}
 {% load static %}
@@ -20,6 +26,14 @@
 {% endblock css_file %}
 
 {% block content %}
+{% if comment_form.errors %}
+    <div id="alert">
+        <h2>Somthing went wrong!</h2>
+        <p>Please check the error in the form below and fix the error!</p>
+        <a href="#comment-form">Fix </a>
+    </div>
+{% endif %}
+
 <section id="summary">
     <h2> {{ post_detail.title | title}} </h2>
     <br>
@@ -45,7 +59,7 @@
     <form action="{% url "blog_details" post_detail.slug %}" method="POST">
         {% csrf_token %}
         {% for form_field in comment_form %}
-            <div class = 'form-control'>
+            <div class = "form-control {% if form_field.errors%} invalid {% endif %}">
                 {{ form_field.label_tag }}
                 {{ form_field }}
                 {{ form_field.errors }}
