@@ -13,6 +13,7 @@
 # step 25.3: In views.py, import created form class, in detailPost class under get context data function call the created CommentForm and name it
 # step 27.2: In views.py, insted of DetailView, use View and manually create get and post function 
 # step 29.1: In views.py, as we give the name in comment model, call that in detail
+# step 32.2: In views.py, create view class as ReadLaterView and create post function
 
 
 
@@ -119,3 +120,7 @@ class DetailPost(View):
 #         'post_detail' : post_detail,
 #         'post_tag' : post_detail.tags.all()
 #         })
+
+class ReadLaterView(View):
+    def post(self, request):
+        pass
