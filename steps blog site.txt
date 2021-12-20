@@ -167,8 +167,9 @@ step 31 196: adding comment to admin page
 step 31.1: adding comment to admin.py admin.site.register
 step 31.2: to return object into string, redefine __str__ 
 
-step 32: 196: Read later button, view class created
+step 32: 197: Read later button, view class created
 step 32.1: In detail_post.html, create button, add the button to form, add csrf token and method to post
 step 32.2: In views.py, create view class as ReadLaterView and create post function
 step 32.3: In urls.py, create new path give path name and call created ReadLaterView class and give a name.
 so for we have created the url, later button, and view class, now we need to define the view function.
+
