@@ -3,6 +3,9 @@
 <!step 4.5: load static and link app.css in base.html file  !>
 <!step 7.1: add url tag for shiv blog by specifing name from app urls!>
 <!step 7.2: add url tag for all post by specifing name from app urls!>
+<!step 33.3: in base.html, add a href as stored post to show in menu bar!>
+
+
 
 {% load static %}
 
@@ -22,6 +25,7 @@
   <header id="main-navigation">
     <h1><a href="{% url 'home' %}">Shiv Blog</a></h1>
     <nav>
+      <a href="{% url 'read_later' %}">Stored Posts</a>
       <a href="{% url 'blogs' %}">All Posts</a>
     </nav>
   </header>

@@ -44,10 +44,10 @@
         
     </div>
     <div id="read-later">
-        <form action="{% url 'read_later' %}" method = "post" > 
+        <form action="{% url 'read_later' %}" method = "POST" > 
         {% csrf_token %}
             <button> Read Later </button>
-            <input type = "hidden" value = {{ post_detail.slug}} name="post_slug">
+            <input type = "hidden" value = {{ post_detail.id}} name="post_id">
         </form>
     </div>
     <article>

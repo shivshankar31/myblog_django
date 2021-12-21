@@ -14,7 +14,7 @@
 # step 27.2: In views.py, insted of DetailView, use View and manually create get and post function 
 # step 29.1: In views.py, as we give the name in comment model, call that in detail
 # step 32.2: In views.py, create view class as ReadLaterView and create post function
-
+# step 33.1: create post and get function for the class ReadLaterView
 
 
 from typing import Reversible
@@ -122,5 +122,33 @@ class DetailPost(View):
 #         })
 
 class ReadLaterView(View):
+    def get(self,request):
+        stored_post = request.session.get('stored_post')
+
+        context = {}
+
+        if stored_post is None or len(stored_post) == 0:
+            context ['posts'] = []
+            context ['has_post'] = False
+        
+        else:
+            posts = Post.objects.filter(id__in = stored_post)
+            context['posts'] = posts
+            context['has_post'] = True
+        
+        return render(request, 'blog/stored_post.html', context)
+
+
     def post(self, request):
-        pass
+        stored_post = request.session.get('stored_post')
+
+        if stored_post is None:
+            stored_post = [ ]
+
+        post_id1 = int(request.POST['post_id'])
+        
+        if post_id1 not in stored_post:
+            stored_post.append(post_id1)
+            request.session['stored_post'] = stored_post
+
+        return HttpResponseRedirect('/')    

@@ -173,3 +173,9 @@ step 32.2: In views.py, create view class as ReadLaterView and create post funct
 step 32.3: In urls.py, create new path give path name and call created ReadLaterView class and give a name.
 so for we have created the url, later button, and view class, now we need to define the view function.
 
+
+step 33: 198: Managing Read Later via Session
+you should see the video to know more detail
+step 33.1: in views.py, create post and get function for the class ReadLaterView
+step 33.2: create new html page as stored_post.html, to show the list of read later links.
+step 33.3: in base.html, add a href as stored post to show in menu bar.
