@@ -179,3 +179,7 @@ you should see the video to know more detail
 step 33.1: in views.py, create post and get function for the class ReadLaterView
 step 33.2: create new html page as stored_post.html, to show the list of read later links.
 step 33.3: in base.html, add a href as stored post to show in menu bar.
+
+step 34: 199: adding styling to stored post page
+step 34.1: create stored_post.css file and add the styling,
+step 34.2: add the css block to stored_post.html
