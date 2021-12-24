@@ -138,3 +138,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR /'Uploads'
 MEDIA_URL = '/files/'
+# SESSION_COOKIE_AGE = 120

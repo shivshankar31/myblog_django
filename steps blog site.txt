@@ -183,3 +183,6 @@ step 33.3: in base.html, add a href as stored post to show in menu bar.
 step 34: 199: adding styling to stored post page
 step 34.1: create stored_post.css file and add the styling,
 step 34.2: add the css block to stored_post.html
+
+step 35: 200: add read later feature later
+watch video
