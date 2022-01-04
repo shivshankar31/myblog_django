@@ -186,3 +186,15 @@ step 34.2: add the css block to stored_post.html
 
 step 35: 200: add read later feature later
 watch video
+
+Section 15: Deployment
+
+203: Deployment consideration
+
+Choose a database - SQLite might work but too slow and not secure . go with MYSQL or Postgres
+Adjust Settings - adjust the settings for chosen hosting provider
+Collect static file - files are not served automaticly 
+handling static and uploded files 
+choose a host server
+
+
