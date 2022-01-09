@@ -197,4 +197,22 @@ Collect static file - files are not served automaticly
 handling static and uploded files 
 choose a host server
 
+204: Choosing which Database?
+here we will see SQLite and Postgres during deployment.
+
+205: Django is not a Webserver
+
+Django does not listen for incomming request or handle any other server task. there are two interfaces to handle this asgi and wsgi
+
+wsgi: its a python standard for communication between web servers, it supports synchronous code
+asgi: its a asynchronous friendly standard
+
+in most causes we will be using wsgi interfaces
+
+206 : Static file and user upload handling
+
+There are 3 ways to handle the files, 
+1. As we use in django project, make changes in urls.py and point the static folder in the project file. this approch is not good for bigger project, performance will be a problem.
+2. configer a webserver that handles the django app and static file in the same server but different process, so it gives better performance.
+3. using dedicated server for static files and dedicated server for django app, so the the we can get best performance.
 
