@@ -226,3 +226,7 @@ Step 37: 209: collecting static file
 Step 37.1: In settings.py, add STATIC_ROOT = BASE_DIR / 'staticfiles' to create a folder for all static files, where it helps to collect all static file in one place.
 step 37.2: run the command python3 manage.py collectstatic, which collect all the files in above created folder
 when ever you make changes to the static file you have to run the above command and update the folder.
+: 
+step 38: 210: serving static file
+method 1: configuring django to server the staticfile, this method can be used for less trafic website.
+step 38.1: In urls.py, same as media_url add for static files as well. 

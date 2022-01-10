@@ -15,7 +15,7 @@ Including another URLconf
 """
 # step 2.5: add path in project folder urls.py file, empty '' = localhost"8000/, it stright away take us to blog page
 # step 22.1: In main project urls.py, add static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) to urlpattern.
-
+# step 38.1: In urls.py, same as media_url add for static files as well. 
 
 
 
@@ -28,4 +28,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls'))
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) \
+  + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
