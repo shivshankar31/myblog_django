@@ -1,3 +1,6 @@
+
+
+
 """
 Django settings for mysite_django project.
 
@@ -22,8 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-)2pb9$tb-n9=_)s$+2%(p6s^d-vhko+y36oz+77npki_romn+w'
 
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# step 36.1: change DEBUG to false, because moving to production env
+DEBUG = False 
 
 ALLOWED_HOSTS = []
 
