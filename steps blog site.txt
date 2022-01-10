@@ -216,6 +216,8 @@ There are 3 ways to handle the files,
 2. configer a webserver that handles the django app and static file in the same server but different process, so it gives better performance.
 3. using dedicated server for static files and dedicated server for django app, so the the we can get best performance.
 
-step 36: 207:review settings.py file and make changes 
+207: Loing to AWS  
+
+step 36: 208:review settings.py file and make changes 
 most of the settings works as set default.
 step 36.1: In settings.py, change DEBUG to false, because moving to production env
