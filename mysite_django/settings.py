@@ -129,6 +129,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+# Step 37.1: In settings.py, add STATIC_ROOT = BASE_DIR / 'staticfiles' to create a folder for all static files, where it helps to collect all static file in one place.
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
 
 # step 4.4: add staticfile_dirs in settings.py to inform django that we have created static folder globaly.

@@ -221,3 +221,8 @@ There are 3 ways to handle the files,
 step 36: 208:review settings.py file and make changes 
 most of the settings works as set default.
 step 36.1: In settings.py, change DEBUG to false, because moving to production env
+
+Step 37: 209: collecting static file
+Step 37.1: In settings.py, add STATIC_ROOT = BASE_DIR / 'staticfiles' to create a folder for all static files, where it helps to collect all static file in one place.
+step 37.2: run the command python3 manage.py collectstatic, which collect all the files in above created folder
+when ever you make changes to the static file you have to run the above command and update the folder.
