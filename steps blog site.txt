@@ -230,3 +230,13 @@ when ever you make changes to the static file you have to run the above command 
 step 38: 210: serving static file
 method 1: configuring django to server the staticfile, this method can be used for less trafic website.
 step 38.1: In urls.py, same as media_url add for static files as well. 
+
+step 39: 211: migrate and create supperuser 
+the below should be completed before migrating to server
+step 39.1: use makemigrations and migrate commands to make sure everthing is migrated.
+step 39.2: python3 manage.py createsuperuser command to create a superuser account.
+
+step 40: 212: create requirment.txt and virtualenv
+if the project is not created in virtualenv, before generating requirment.txt file do the below step
+step 40.1: python3 -m venv django_my_site, run the command, now a new folder created with given name, then vscode will automaticly detect the change if not we can also do manualy.
+step 40.2: python3 -m pip freeze > requirments.txt, run the command to create the file 
