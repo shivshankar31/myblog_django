@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from os import getenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,15 +24,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# step 41.4: below secret key should not be exposed to githud, or we can add to the server and populate from there using getenv
+
 SECRET_KEY = 'django-insecure-)2pb9$tb-n9=_)s$+2%(p6s^d-vhko+y36oz+77npki_romn+w'
 
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # step 36.1: change DEBUG to false, because moving to production env
-DEBUG = False 
+# step 41.3: in settings.py, add getenv on debug to get it from the host 
 
-ALLOWED_HOSTS = []
+DEBUG = getenv('IS_DEVELOPMENT', False)
+
+
+# step 41.2: in settings.py, add getenv to allowed_host to populate the allowed host names
+ALLOWED_HOSTS = [ 
+    getenv("APP_HOST") 
+    
+]
 
 
 # Application definition
