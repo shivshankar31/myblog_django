@@ -34,12 +34,14 @@ SECRET_KEY = 'django-insecure-)2pb9$tb-n9=_)s$+2%(p6s^d-vhko+y36oz+77npki_romn+w
 # step 36.1: change DEBUG to false, because moving to production env
 # step 41.3: in settings.py, add getenv on debug to get it from the host 
 
-DEBUG = getenv('IS_DEVELOPMENT', False)
+DEBUG = getenv('IS_PRODUCTION', False)
 
 
 # step 41.2: in settings.py, add getenv to allowed_host to populate the allowed host names
+
+
 ALLOWED_HOSTS = [ 
-    getenv("APP_HOST") 
+    getenv('APP_HOST') 
     
 ]
 
